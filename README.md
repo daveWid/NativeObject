@@ -8,8 +8,8 @@ library will help you convert everything into a native php format.
 The easiest way to learn about this library is to see an example. We'll
 pretend that we are converting a row from a database.
 
-The property map is an array of _property name_ => 'mapping name'_ pairs. See the 
-[Casting(#casting)] section for more information on what is available.
+The property map is an array of _'property name' => 'mapping name'_ pairs. See the 
+[Casting](#casting) section for more information on what is available.
 
 ``` php
 class UserObject extends Wid\Data\NativeObject
@@ -70,6 +70,32 @@ You can also pass in anything that can be called by `call_user_func` as the seco
 argument in the propery map (see `roles` in the example) and the data can be
 casted that way. In our example it is turning a string into an array, exploding
 on the commas.
+
+## Property Access
+
+So how do I get at the data?
+
+Well each of the following lines will work.
+
+``` php
+$id = $user['id']; // Array Access
+$id = $user->id; // Object Notation
+$id = $user->get('id'); // Getter
+```
+
+`get()` has the added bonus of being able to add a default value as the second
+parameter. This is `null` if not explicitly set.
+
+And setting?
+
+You can set with Array Access, Object Notation or a Setter, just like when you
+are getting data out. All of the methods below will work.
+
+``` php
+$user['active'] = true;
+$user->active = true;
+$user->set('active', true);
+```
 
 ## Why?
 
