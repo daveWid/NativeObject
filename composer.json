@@ -1,0 +1,19 @@
+{
+	"require": {
+
+	},
+
+	"require-dev": {
+		"phpunit/phpunit": "3.7.x"
+	},
+
+	"autoload": {
+		"psr-4": {
+			"Wid\\": "src/"
+		}
+	},
+
+	"config": {
+		"bin-dir": "bin"
+	}
+}
