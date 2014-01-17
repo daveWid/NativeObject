@@ -8,9 +8,9 @@ namespace Wid;
  */
 class Cast
 {
-	const DATE_PATTERN = 'Y-m-d';
-	const TIME_PATTERN = 'H:i:s';
-	const TIMESTAMP_PATTERN = 'U';
+	public static $datePattern = 'Y-m-d';
+	public static $timePattern = 'H:i:s';
+	public static $timestampPattern = 'U';
 
 	/**
 	 * @param  mixed $source
@@ -49,7 +49,7 @@ class Cast
 	{
 		if ($pattern === null)
 		{
-			$pattern = self::DATE_PATTERN.' '.self::TIME_PATTERN;
+			$pattern = self::$datePattern.' '.self::$timePattern;
 		}
 
 		return \DateTime::createFromFormat($pattern, $source);
@@ -61,7 +61,7 @@ class Cast
 	 */
 	public static function toDate($source)
 	{
-		return self::toDateTime($source, self::DATE_PATTERN);
+		return self::toDateTime($source, self::$datePattern);
 	}
 
 	/**
@@ -70,7 +70,7 @@ class Cast
 	 */
 	public static function toTime($source)
 	{
-		return self::toDateTime($source, self::TIME_PATTERN);
+		return self::toDateTime($source, self::$timePattern);
 	}
 
 	/**
@@ -79,7 +79,7 @@ class Cast
 	 */
 	public static function toTimestamp($source)
 	{
-		return self::toDateTime($source, self::TIMESTAMP_PATTERN);
+		return self::toDateTime($source, self::$timestampPattern);
 	}
 
 	/**
