@@ -5,8 +5,11 @@ library will help you convert everything into a native php format.
 
 ## Example
 
-Really the easiest way to learn about this library is to see an example. We'll
+The easiest way to learn about this library is to see an example. We'll
 pretend that we are converting a row from a database.
+
+The property map is an array of _property name_ => 'mapping name'_ pairs. See the 
+[Casting(#casting)] section for more information on what is available.
 
 ``` php
 class UserObject extends Wid\Data\NativeObject
@@ -78,8 +81,12 @@ of it._
 
 ## Development
 
-See some things that can be improved or want to help add some features? Clone
-this repo and send me a pull request! Any help will be appreciated.
+See some things that can be improved or want to help add some features?
+
+* Clone this repo
+* Run `composer install`
+* Code away (with phpunit tests to back up your changes!)
+* Send me a pull request!
 
 ----------------
 
