@@ -1,4 +1,17 @@
 {
+	"name": "wid/native-object",
+	"description": "Keep your data in native php types!",
+	"type": "library",
+	"keywords": ["data", "native"],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Dave Widmer",
+			"email": "dave@davewidmer.net",
+			"role": "Developer"
+		}
+	],
+
 	"require": {
 
 	},
