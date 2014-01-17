@@ -1,6 +1,6 @@
 <?php
 
-use Wid\Cast;
+use Wid\Data\Cast;
 
 class CastingTest extends PHPUnit_Framework_TestCase
 {

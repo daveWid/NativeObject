@@ -1,10 +1,10 @@
 <?php
 
-namespace Wid;
+namespace Wid\Data;
 
-use Wid\Cast;
+use Wid\Data\Cast;
 
-class DataObject implements \ArrayAccess
+class NativeObject implements \ArrayAccess
 {
 	public $propertyMap = array();
 

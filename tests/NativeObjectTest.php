@@ -1,8 +1,8 @@
 <?php
 
-use Wid\DataObject;
+use Wid\Data\NativeObject;
 
-class DataObjectTest extends PHPUnit_Framework_TestCase
+class NativeObjectTest extends PHPUnit_Framework_TestCase
 {
 	public $obj;
 
@@ -102,7 +102,7 @@ class DataObjectTest extends PHPUnit_Framework_TestCase
 
 }
 
-class UserObject extends DataObject
+class UserObject extends NativeObject
 {
 	protected function init()
 	{

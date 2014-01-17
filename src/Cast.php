@@ -1,6 +1,6 @@
 <?php
 
-namespace Wid;
+namespace Wid\Data;
 
 /**
  * A class to help with casting strings to native php types (the to* methods)
